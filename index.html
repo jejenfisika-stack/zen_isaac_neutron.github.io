@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Website STEM EDP</title>
+<title>Portofolio Guru</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
 <style>
 :root{
@@ -238,7 +238,7 @@ footer span{color:var(--accent);font-weight:700}
 
 <!-- ── NAVBAR ── -->
 <nav>
-  <span class="nav-logo" onclick="showPage('beranda')">Dr. Zainur Rasyid Ridlo, S.Pd, M.Pd</span>
+  <span class="nav-logo" onclick="showPage('beranda')">NamaGuru</span>
   <ul class="nav-links" id="navLinks">
     <li><a onclick="showPage('beranda')" id="nav-beranda" class="active">Beranda</a></li>
     <li><a onclick="showPage('tentang')" id="nav-tentang">Tentang</a></li>
@@ -263,24 +263,19 @@ footer span{color:var(--accent);font-weight:700}
 <div class="page active" id="page-beranda">
 
   <!-- Hero -->
-<div class="hero">
-  <div class="hero-avatar" style="overflow:hidden;padding:0">
-    <img src="Foto_Zainur_2025.jpg" 
-         style="width:100%;height:100%;object-fit:cover;border-radius:80%"
-         alt="Dr. Zainur Rasyid Ridlo"/>
-  </div>
-  <div class="hero-text">
-    <h1>Dr. Zainur Rasyid Ridlo, S.Pd, M.Pd</h1>
-    <div class="subtitle">FKIP · Universitas Jember</div>
-    <p>Zainur Rasyid Ridlo, Lahir di Situbondo, Pendidikan Sekolah Dasar hingga Menengah diselesaikan Situbondo, Menyelesaikan program Sarjana, Magister, hingga Doktor di bidang Pendidikan IPA Universitas Jember. Riset collaborator di NTNU (National taiwan Normal University-Taiwan) dan invited speaker Road to Researchs (India). Aktif menulis dan menjadi reviewer di Jurnal Internasional Bereputasi terindeks scopus. Fokus penelitian pada <em>computational thinking skills</em>, <em>Machine Learning for Science Education</em>, dan media pembelajaran berbasis smart sensor.</p>
-    <div class="hero-badges">
-      <span class="badge">Web3 Developer</span>
-      <span class="badge">Machine Learning for Science Education</span>
-      <span class="badge">Computational Thinking</span>
-      <span class="badge">Smart Sensor</span>
+  <div class="hero">
+    <div class="hero-avatar">👨‍🏫</div>
+    <div class="hero-text">
+      <h1>Nama Lengkap Guru</h1>
+      <div class="subtitle">Guru Matematika · SMA Negeri 1 Jember</div>
+      <p>Pendidik berdedikasi dengan fokus pada inovasi pembelajaran berbasis teknologi dan pengembangan kurikulum. Aktif dalam penelitian dan kegiatan akademik nasional.</p>
+      <div class="hero-badges">
+        <span class="badge">Matematika</span>
+        <span class="badge">Teknologi Pendidikan</span>
+        <span class="badge">Peneliti</span>
+      </div>
     </div>
   </div>
-</div>
 
   <!-- Berita Kegiatan -->
   <div style="background:#fff8f0;border-top:1px solid var(--border)">
@@ -291,21 +286,17 @@ footer span{color:var(--accent);font-weight:700}
       </div>
       <div class="cards-grid">
         <div class="card">
-          <div class="card-thumb" style="padding:0;overflow:hidden">
-  <img src="workshop.jpg" style="width:100%;height:100%;object-fit:cover"/>
-</div>
+          <div class="card-thumb">🤖</div>
           <div class="card-body">
             <div class="card-tag">Workshop</div>
-            <div class="card-title">Road to Research (Shardaya College-India)</div>
-            <p class="card-desc">International Conference yang membahas integrasi smart sensor dalam collecting data primer untuk Machine Learning.</p>
+            <div class="card-title">CGANT Workshop on AI — Universitas Jember</div>
+            <p class="card-desc">Workshop membahas pemanfaatan kecerdasan buatan dalam riset matematika, teori graf, dan kombinatorika bersama para pakar nasional.</p>
             <div class="card-meta">📅 15 Mei 2025</div>
             <button class="btn-read" onclick="showPage('kegiatan')">Baca Selengkapnya</button>
           </div>
         </div>
         <div class="card">
-         <div class="card-thumb" style="padding:0;overflow:hidden">
-  <img src="publikasi.png" style="width:100%;height:100%;object-fit:cover"/>
-</div>
+          <div class="card-thumb">📝</div>
           <div class="card-body">
             <div class="card-tag">Publikasi</div>
             <div class="card-title">Artikel Terbit di Jurnal Nasional Terakreditasi</div>
@@ -315,13 +306,11 @@ footer span{color:var(--accent);font-weight:700}
           </div>
         </div>
         <div class="card">
-          <div class="card-thumb" style="padding:0;overflow:hidden">
-  <img src="risetntnu.jpg" style="width:100%;height:100%;object-fit:cover"/>
-</div>
+          <div class="card-thumb">🏆</div>
           <div class="card-body">
-            <div class="card-tag"></div>
-            <div class="card-title">Riset Kolaborasi di NTNU</div>
-            <p class="card-desc">Riset Kolaborasi dilakuakan di NTNU melalui program NDT (Non Dikti Training) dari IDb-Universitas Jember.</p>
+            <div class="card-tag">Prestasi</div>
+            <div class="card-title">Raih Penghargaan Guru Berprestasi Tingkat Provinsi</div>
+            <p class="card-desc">Penghargaan diraih atas inovasi dalam penggunaan media pembelajaran interaktif berbasis GeoGebra dan dedikasi dalam pembinaan siswa olimpiade.</p>
             <div class="card-meta">📅 10 Maret 2025</div>
             <button class="btn-read" onclick="showPage('tentang')">Baca Selengkapnya</button>
           </div>
@@ -340,16 +329,12 @@ footer span{color:var(--accent);font-weight:700}
     <div class="divider"></div>
 
     <div class="about-flex" style="margin-bottom:44px">
-      <div class="about-photo" style="padding:0;overflow:hidden">
-  <img src="Foto_Zainur_2025.jpg" 
-       style="width:100%;height:100%;object-fit:cover;border-radius:12px"
-       alt="Dr. Zainur Rasyid Ridlo"/>
-</div>
+      <div class="about-photo">👨‍🏫</div>
       <div class="about-info">
-        <h2>Dr. Zainur Rasyid Ridlo, S.Pd., M.Pd.</h2>
-        <div class="role">Dosen FKIP Universitas Jember · NIP. 199805232019031009</div>
-        <p>Saya adalah Dosen S1 dan S2 Pendidikan IPA, FKIP Universitas Jember. Fokus riset saya adalah Machine learning, ANN, CNN, Blockchain, dan Webs3 untuk pembelajaran IPA</p>
-        <p>Aktif dalam kegiatan penelitian dan menulis artikel di jurnal internasional bereputasi dengan tema Machine learning, ANN, CNN, Blockchain, dan Webs3 untuk pembelajaran IPA.</p>
+        <h2>Nama Lengkap Guru, S.Pd., M.Pd.</h2>
+        <div class="role">Guru Matematika · SMA Negeri 1 Jember · NIP 19800101 200501 1 001</div>
+        <p>Saya adalah seorang pendidik dengan pengalaman lebih dari 15 tahun dalam bidang matematika. Saya percaya bahwa setiap siswa memiliki potensi luar biasa yang perlu dikembangkan dengan pendekatan pembelajaran yang tepat, kreatif, dan menyenangkan.</p>
+        <p>Aktif dalam kegiatan penelitian tindakan kelas, pengembangan modul ajar, dan pelatihan guru di tingkat regional maupun nasional.</p>
       </div>
     </div>
 
@@ -357,35 +342,34 @@ footer span{color:var(--accent);font-weight:700}
       <div class="info-box">
         <h3>🎓 Riwayat Pendidikan</h3>
         <ul>
-          <li><span class="dot"></span>S3 Pendidikan IPA — Universitas Jember, 2025</li>
-          <li><span class="dot"></span>S2 Pendidikan IPA — Universitas Jember, 2017</li>
-          <li><span class="dot"></span>S1 Pendidikan IPA — Universitas Jember, 2013</li>
+          <li><span class="dot"></span>S2 Pendidikan Matematika — Univ. Negeri Malang, 2010</li>
+          <li><span class="dot"></span>S1 Pendidikan Matematika — Univ. Jember, 2005</li>
         </ul>
       </div>
       <div class="info-box">
-        <h3>🏅 Tema Penelitian</h3>
+        <h3>🏅 Penghargaan</h3>
         <ul>
-          <li><span class="dot"></span>Machine Learning for Science Education</li>
-          <li><span class="dot"></span>Smart sensor for Science Education</li>
-          <li><span class="dot"></span>Blockchain for Science Education</li>
+          <li><span class="dot"></span>Guru Berprestasi Provinsi Jawa Timur 2023</li>
+          <li><span class="dot"></span>Inovasi Pembelajaran Terbaik Kemendikbud 2022</li>
+          <li><span class="dot"></span>Finalis Guru Inspiratif Nasional 2021</li>
         </ul>
       </div>
       <div class="info-box">
         <h3>🎯 Keahlian</h3>
         <ul>
-          <li><span class="dot"></span>Desain Smart Sensor untuk Pembelajaran</li>
-          <li><span class="dot"></span>Pembelajaran RBL-STEM</li>
-          <li><span class="dot"></span>Machine Learning untuk Pendidikan IPA</li>
-          <li><span class="dot"></span>Blockchain for Education</li>
+          <li><span class="dot"></span>Desain Kurikulum Berbasis Kompetensi</li>
+          <li><span class="dot"></span>Pembelajaran Berbasis Proyek (PBL)</li>
+          <li><span class="dot"></span>Integrasi Teknologi (GeoGebra, Desmos)</li>
+          <li><span class="dot"></span>Pelatihan &amp; Pengembangan Guru</li>
         </ul>
       </div>
       <div class="info-box">
-        <h3>📚 Mata Kuliah Diampu</h3>
+        <h3>📚 Mata Pelajaran Diampu</h3>
         <ul>
-          <li><span class="dot"></span>STEAM Innovative Learning MediaI</li>
-          <li><span class="dot"></span>Matematika Sains</li>
-          <li><span class="dot"></span>Pengantar Teeknologi Informasi</li>
-          <li><span class="dot"></span>Klimatologi</li>
+          <li><span class="dot"></span>Matematika Wajib Kelas X, XI, XII</li>
+          <li><span class="dot"></span>Matematika Peminatan (MIPA)</li>
+          <li><span class="dot"></span>Statistika &amp; Peluang</li>
+          <li><span class="dot"></span>Pembina Olimpiade Matematika</li>
         </ul>
       </div>
     </div>
@@ -399,39 +383,39 @@ footer span{color:var(--accent);font-weight:700}
   <div class="section-wrap">
     <div class="section-title">Kepemimpinan &amp; Organisasi</div>
     <div class="divider"></div>
-    <p class="section-desc">Rekam jejak peran kepemimpinan dan kontribusi dalam Medukung Tridahrma Perguruan Tinggi.</p>
+    <p class="section-desc">Rekam jejak peran kepemimpinan dan kontribusi dalam organisasi profesi serta institusi pendidikan.</p>
 
     <div class="timeline">
       <div class="timeline-item">
         <div class="tl-dot">👑</div>
         <div class="tl-body">
-          <h3>Ketua Gugus Penjaminan Pendidikan IPA</h3>
-          <div class="tl-year">2026 — Sekarang</div>
-          <p>Monitoring, evaluasi dan supervisi proses pembelajaran, penelitian dan pengabdian masyarakat di Pendidikan IPA.</p>
+          <h3>Kepala Bidang Kurikulum — SMA Negeri 1 Jember</h3>
+          <div class="tl-year">2022 — Sekarang</div>
+          <p>Memimpin pengembangan dan implementasi kurikulum Merdeka Belajar, koordinasi penyusunan dokumen kurikulum sekolah, dan supervisi proses pembelajaran.</p>
         </div>
       </div>
       <div class="timeline-item">
         <div class="tl-dot">📋</div>
         <div class="tl-body">
-          <h3>Anggota Kelompok Riset CEREBEL</h3>
-          <div class="tl-year">2018 — sekarang</div>
-          <p>Mengembangkan penelitian berbasis riset dan STEM yang terintegrasi machine learning dan Blockchain.</p>
+          <h3>Ketua MGMP Matematika — Kabupaten Jember</h3>
+          <div class="tl-year">2019 — 2022</div>
+          <p>Mengkoordinasi kegiatan pengembangan profesi guru matematika se-Kabupaten Jember, menyelenggarakan workshop, dan penyusunan bank soal bersama.</p>
         </div>
       </div>
       <div class="timeline-item">
         <div class="tl-dot">🏛️</div>
         <div class="tl-body">
-          <h3>Pengembang Media Pembelajaran</h3>
-          <div class="tl-year">2017 - sekarang</div>
-          <p>Terlibat dalam penyusunan media Pembelajaran di FKIP Universitas Jember.</p>
+          <h3>Anggota Tim Pengembang Sekolah</h3>
+          <div class="tl-year">2017 — 2019</div>
+          <p>Terlibat dalam penyusunan Rencana Pengembangan Sekolah (RPS) dan program digitalisasi administrasi pembelajaran sekolah.</p>
         </div>
       </div>
       <div class="timeline-item">
         <div class="tl-dot">🎓</div>
         <div class="tl-body">
-          <h3>Pengembang Model Pembelajaran</h3>
-          <div class="tl-year">2017 - sekarang</div>
-          <p>Terlibat dalam penyusunan media Pembelajaran di FKIP Universitas Jember.</p>
+          <h3>Instruktur Nasional Kurikulum 2013</h3>
+          <div class="tl-year">2014 — 2017</div>
+          <p>Dipercaya sebagai Instruktur Nasional untuk melatih guru-guru matematika dalam implementasi Kurikulum 2013 di wilayah Jawa Timur.</p>
         </div>
       </div>
     </div>
@@ -451,37 +435,37 @@ footer span{color:var(--accent);font-weight:700}
       <div class="pub-item">
         <div class="pub-icon">📄</div>
         <div class="pub-body">
-          <h3>Computational Thinking and Deep Learning on Science Education Framework: A Systematic Review</h3>
-          <div class="pub-meta">Science Education International, Vol 36 No 4 (2025)</div>
-          <p>Penelitian adalah jenis sistematic literature review yang menganalisis hubungan antara computational thinking dan deep learning</p>
-          <span class="pub-tag">Jurnal Internasional Bereputasi (Scopus-Q3)</span>
+          <h3>Efektivitas Project-Based Learning terhadap Kemampuan Berpikir Kritis Siswa SMA</h3>
+          <div class="pub-meta">Jurnal Pendidikan Matematika Indonesia · Vol. 8 No. 2 · 2024</div>
+          <p>Penelitian quasi-eksperimen yang membuktikan peningkatan signifikan kemampuan berpikir kritis melalui implementasi PBL pada materi fungsi trigonometri kelas XI.</p>
+          <span class="pub-tag">Jurnal Nasional Terakreditasi Sinta 2</span>
         </div>
       </div>
       <div class="pub-item">
         <div class="pub-icon">🔬</div>
         <div class="pub-body">
-          <h3>Computer Vision on Education: Fostering AI Literacy using RBL-STEM with Google Teachable Machine</h3>
-          <div class="pub-meta">Jurnal Penelitian & Pengembangan Pendidikan Fisika, Vol 11, No (2) 2025</div>
-          <p>Penelitian ini berkaitan dengan penggunaan CNN berbasis Teachable Machine untuk meningkatkan Ai Literacy dengan menggunakan Model RBL-STEM</p>
-          <span class="pub-tag">Jurnal Nasional Terakreditasi Sinta 2</span>
+          <h3>Penggunaan GeoGebra untuk Meningkatkan Kemampuan Visualisasi Spasial pada Materi Transformasi Geometri</h3>
+          <div class="pub-meta">Jurnal Riset Pendidikan Matematika · Vol. 10 No. 1 · 2023</div>
+          <p>Penelitian Tindakan Kelas (PTK) pada siswa kelas XI MIPA dengan mengintegrasikan software GeoGebra dalam pembelajaran transformasi geometri secara interaktif.</p>
+          <span class="pub-tag">Jurnal Nasional Terakreditasi Sinta 3</span>
         </div>
       </div>
       <div class="pub-item">
         <div class="pub-icon">💡</div>
         <div class="pub-body">
-          <h3>Exploring the impact of makerspace-based learning materials on students’ computational thinking skills: Using machine learning to address challenges in smart coffee agroforestry</h3>
-          <div class="pub-meta">Edelweiss Applied Science and Technology, Vol 8, No (5), 2024</div>
-          <p>Penelitian ini Mengintegrasikan smart sensor dan machine learning untuk melatih keterampilan computational thinking mahasiswa</p>
-          <span class="pub-tag">Jurnal Internasional Bereputasi (Scopus-Q3)</span>
+          <h3>Modul Pembelajaran Statistika Berbasis E-Learning untuk Siswa SMA</h3>
+          <div class="pub-meta">Prosiding Seminar Nasional Matematika dan Pendidikan Matematika · 2022</div>
+          <p>Pengembangan modul e-learning interaktif materi statistika yang dilengkapi visualisasi data, kuis adaptif, dan umpan balik otomatis berbasis platform Moodle.</p>
+          <span class="pub-tag">Prosiding Nasional</span>
         </div>
       </div>
       <div class="pub-item">
         <div class="pub-icon">📚</div>
         <div class="pub-body">
-          <h3>On RIDS Analysis for Shade Tree Placement and Its Application to STGNN Multi-step Forecasting on RH and CO2 Concentration of Coffee Agroforestry</h3>
-          <div class="pub-meta">Statistics, Optimization & Information Computing, Vol 14 no 3, 2025</div>
-          <p>Penelitian ini mengintegrasikan teori graf, smart sensor dan ANN untuk melakukan time series forecasting di perkebunan kopi</p>
-          <span class="pub-tag">Jurnal Internasional Bereputasi (Scopus-Q2)</span>
+          <h3>Buku Ajar: Matematika Kontekstual untuk SMA Kelas XI</h3>
+          <div class="pub-meta">Penerbit Erlangga · ISBN 978-XXX-XXXX-XX-X · 2021</div>
+          <p>Buku ajar yang mengintegrasikan konteks kehidupan nyata dalam setiap materi matematika kelas XI, disusun berdasarkan prinsip pembelajaran bermakna dan kontekstual.</p>
+          <span class="pub-tag">Buku Ajar</span>
         </div>
       </div>
     </div>
@@ -499,37 +483,31 @@ footer span{color:var(--accent);font-weight:700}
 
     <div class="cards-grid">
       <div class="card">
-        <div class="card-thumb" style="padding:0;overflow:hidden">
-  <img src="pengabdian.jpg" style="width:100%;height:100%;object-fit:cover"/>
-</div>
+        <div class="card-thumb">🤖</div>
         <div class="card-body">
           <div class="card-tag">Workshop</div>
-          <div class="card-title">Workshop Ai for Education</div>
-          <p class="card-desc">Workshop memfokuskan pada pemanfaatan AI melakukan klasifikasi penyakit daun mangga.</p>
+          <div class="card-title">CGANT Workshop on AI — Universitas Jember</div>
+          <p class="card-desc">Workshop memfokuskan pada pemanfaatan AI dalam riset matematika, khususnya teori graf dan kombinatorika. Dihadiri pakar dari berbagai universitas.</p>
           <div class="card-meta">📅 15 Mei 2025 · Universitas Jember</div>
           <button class="btn-read">Selengkapnya</button>
         </div>
       </div>
       <div class="card">
-        <div class="card-thumb" style="padding:0;overflow:hidden">
-  <img src="publikasi.png" style="width:100%;height:100%;object-fit:cover"/>
-</div>
+        <div class="card-thumb">🎤</div>
         <div class="card-body">
-          <div class="card-tag">Publikasi</div>
-          <div class="card-title">Publikasi Artikel Terindeks Scopus</div>
-          <p class="card-desc">Pubikasi artikel di Jurnal Internasional Bereputasi terindeks Scopus tentang integrasi Smart sensor, Teori Graf dan Machine Learning.</p>
+          <div class="card-tag">Seminar Nasional</div>
+          <div class="card-title">Seminar Nasional Inovasi Pembelajaran Matematika</div>
+          <p class="card-desc">Menjadi narasumber dengan materi "Transformasi Digital dalam Kelas Matematika: Dari GeoGebra hingga AI" di hadapan 300+ peserta guru se-Indonesia.</p>
           <div class="card-meta">📅 20 Maret 2025 · Surabaya</div>
           <button class="btn-read">Selengkapnya</button>
         </div>
       </div>
       <div class="card">
-         <div class="card-thumb" style="padding:0;overflow:hidden">
-  <img src="teac_mach1.png" style="width:100%;height:100%;object-fit:cover"/>
-  </div>
+        <div class="card-thumb">🏫</div>
         <div class="card-body">
           <div class="card-tag">Pelatihan</div>
-          <div class="card-title">Pelatihan CNN dengan Teachable Machine</div>
-          <p class="card-desc">Pelatihan CNN sederhana menggunakan Teachable Machine.</p>
+          <div class="card-title">Pelatihan Guru Penggerak Angkatan 9</div>
+          <p class="card-desc">Mengikuti program Guru Penggerak Kemendikbudristek sebagai peserta aktif, mendalami paradigma baru pendidikan dan kepemimpinan pembelajaran.</p>
           <div class="card-meta">📅 Jan — Des 2024</div>
           <button class="btn-read">Selengkapnya</button>
         </div>
@@ -548,7 +526,7 @@ footer span{color:var(--accent);font-weight:700}
     <p class="section-desc">Dokumentasi foto berbagai kegiatan akademik, pelatihan, dan momen berharga dalam perjalanan karier.</p>
     <div class="gallery-grid">
       <div class="gallery-item">🎓<div class="gallery-caption">Wisuda S2 Pendidikan Matematika, 2010</div></div>
-      <div class="gallery-item">🤖<div class="gallery-caption">Workshop NTNU</div></div>
+      <div class="gallery-item">🤖<div class="gallery-caption">CGANT Workshop on AI, Mei 2025</div></div>
       <div class="gallery-item">🏆<div class="gallery-caption">Penghargaan Guru Berprestasi, 2023</div></div>
       <div class="gallery-item">📊<div class="gallery-caption">Seminar Nasional Matematika, 2024</div></div>
       <div class="gallery-item">👩‍🏫<div class="gallery-caption">Kegiatan MGMP Matematika Jember</div></div>
@@ -575,33 +553,34 @@ footer span{color:var(--accent);font-weight:700}
         <h3>Mari Terhubung!</h3>
         <p>Jangan ragu untuk menghubungi saya terkait kolaborasi penelitian, undangan sebagai narasumber, atau pertanyaan seputar pendidikan matematika.</p>
         <div class="contact-detail">
-          <div class="c-item"><div class="c-icon">📧</div><span>isaac.neutron@gmail.com</span></div>
-          <div class="c-item"><div class="c-icon">📱</div><span>+62 812-xxxx-xxxx</span></div>
-          <div class="c-item"><div class="c-icon">🏫</div><span>Universitas Jember, Jawa Timur</span></div>
+          <div class="c-item"><div class="c-icon">📧</div><span>namaguru@email.com</span></div>
+          <div class="c-item"><div class="c-icon">📱</div><span>+62 812-3456-7890</span></div>
+          <div class="c-item"><div class="c-icon">🏫</div><span>SMA Negeri 1 Jember, Jawa Timur</span></div>
           <div class="c-item"><div class="c-icon">🌐</div><span>namaguru.github.io</span></div>
         </div>
       </div>
       <div class="form-box">
-  <form action="https://formspree.io/f/mdajgnrp" method="POST">
-    <label>Nama Lengkap</label>
-    <input type="text" name="nama" placeholder="Nama Anda" required/>
-    <label>Email</label>
-    <input type="email" name="email" placeholder="email@contoh.com" required/>
-    <label>Keperluan</label>
-    <select name="keperluan">
-      <option>Kolaborasi Penelitian</option>
-      <option>Undangan Narasumber</option>
-      <option>Konsultasi Pembelajaran</option>
-      <option>Lainnya</option>
-    </select>
-    <label>Pesan</label>
-    <textarea name="pesan" placeholder="Tulis pesan Anda…"></textarea>
-    <button type="submit" class="btn-submit">Kirim Pesan ✉️</button>
-  </form>
+        <label>Nama Lengkap</label>
+        <input type="text" placeholder="Nama Anda"/>
+        <label>Email</label>
+        <input type="email" placeholder="email@contoh.com"/>
+        <label>Keperluan</label>
+        <select>
+          <option>Kolaborasi Penelitian</option>
+          <option>Undangan Narasumber</option>
+          <option>Konsultasi Pembelajaran</option>
+          <option>Lainnya</option>
+        </select>
+        <label>Pesan</label>
+        <textarea placeholder="Tulis pesan Anda…"></textarea>
+        <button class="btn-submit">Kirim Pesan ✉️</button>
+      </div>
+    </div>
+  </div>
 </div>
+
 <!-- ══════════════════════════════════════
-     PAGE: PORTAL TUGAS (VERSI BARU)
-     Ganti SCRIPT_URL dengan URL Apps Script Anda
+     PAGE: PORTAL TUGAS
 ══════════════════════════════════════ -->
 <div class="page" id="page-portal">
   <div class="portal-header">
@@ -618,14 +597,11 @@ footer span{color:var(--accent);font-weight:700}
       </div>
     </div>
 
-    <!-- ── PANEL: KUMPULKAN TUGAS ── -->
+    <!-- Panel: Kumpulkan Tugas -->
     <div class="portal-panel active" id="panel-kumpul">
       <div class="tugas-form">
         <h3>Form Pengumpulan Tugas</h3>
-        <p class="form-note">
-          Isi seluruh form dengan benar. Tugas yang sudah dikumpulkan akan
-          langsung terkirim ke Google Sheets dan tidak dapat diubah kembali.
-        </p>
+        <p class="form-note">Isi seluruh form dengan benar. Tugas yang sudah dikumpulkan akan diterima oleh guru dan tidak dapat diubah kembali.</p>
 
         <label>Nama Lengkap Siswa *</label>
         <input type="text" id="t-nama" placeholder="Nama sesuai absen" required/>
@@ -659,281 +635,151 @@ footer span{color:var(--accent);font-weight:700}
         </div>
 
         <label style="margin-top:18px">Atau Ketik Jawaban Langsung</label>
-        <textarea id="t-jawaban"
-          placeholder="Ketikkan jawaban atau catatan tugas Anda di sini…"
-          oninput="updateCount(this,'t-count')"></textarea>
+        <textarea id="t-jawaban" placeholder="Ketikkan jawaban atau catatan tugas Anda di sini…" oninput="updateCount(this,'t-count')"></textarea>
         <div class="char-count" id="t-count">0 karakter</div>
 
-        <label>Catatan untuk Dosen</label>
-        <textarea id="t-catatan"
-          placeholder="Opsional: kendala, pertanyaan, atau keterangan tambahan"
-          style="height:80px"></textarea>
+        <label>Catatan untuk Guru</label>
+        <textarea id="t-catatan" placeholder="Opsional: kendala, pertanyaan, atau keterangan tambahan" style="height:80px"></textarea>
 
-        <button class="btn-submit" id="btn-kirim" onclick="submitTugas()">
-          📤 Kumpulkan Tugas
-        </button>
+        <button class="btn-submit" onclick="submitTugas()">📤 Kumpulkan Tugas</button>
 
-        <!-- Pesan sukses -->
         <div class="success-msg" id="success-box">
           <div class="s-icon">✅</div>
           <h4>Tugas Berhasil Dikumpulkan!</h4>
-          <p>Data Anda telah tersimpan di Google Sheets. Pantau status di tab
-            <strong>Rekap Pengumpulan</strong>.</p>
-        </div>
-
-        <!-- Pesan error -->
-        <div id="error-box" style="display:none;background:#ffebee;border:1.5px solid
-          #ef9a9a;border-radius:12px;padding:20px;text-align:center;margin-top:16px">
-          <div style="font-size:2rem;margin-bottom:8px">❌</div>
-          <h4 style="color:#c62828;font-family:'Playfair Display',serif;
-            font-size:1rem;margin-bottom:6px">Gagal Mengirim Tugas</h4>
-          <p style="font-size:.85rem;color:#e53935">
-            Periksa koneksi internet Anda dan coba lagi.
-          </p>
+          <p>Tugas Anda telah tercatat. Pantau status di tab <strong>Rekap Pengumpulan</strong>.</p>
         </div>
       </div>
     </div>
 
-    <!-- ── PANEL: REKAP ── -->
+    <!-- Panel: Rekap -->
     <div class="portal-panel" id="panel-rekap">
-      <div style="background:var(--card);border-radius:16px;padding:28px;
-        border:1px solid #f0e6d3;box-shadow:var(--shadow)">
-
-        <div style="display:flex;justify-content:space-between;
-          align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:12px">
-          <h3 style="font-family:'Playfair Display',serif;
-            color:var(--primary);font-size:1.1rem">
-            Data Pengumpulan Tugas
-          </h3>
-          <div style="display:flex;gap:10px;flex-wrap:wrap">
-            <input type="text" placeholder="🔍 Cari nama / kelas…"
-              id="search-rekap" oninput="filterRekap()"
-              style="padding:8px 14px;border:1.5px solid var(--border);
-              border-radius:8px;font-family:'Lato',sans-serif;font-size:.87rem;
-              background:var(--bg);outline:none;width:200px"/>
-            <button onclick="exportCSV()"
-              style="padding:8px 16px;background:var(--primary);color:#fff;
-              border:none;border-radius:8px;font-family:'Lato',sans-serif;
-              font-size:.85rem;font-weight:700;cursor:pointer">
-              ⬇️ Export CSV
-            </button>
-          </div>
+      <div style="background:var(--card);border-radius:16px;padding:28px;border:1px solid #f0e6d3;box-shadow:var(--shadow)">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:12px">
+          <h3 style="font-family:'Playfair Display',serif;color:var(--primary);font-size:1.1rem">Data Pengumpulan Tugas</h3>
+          <input type="text" placeholder="🔍 Cari nama / kelas…" id="search-rekap"
+            oninput="filterRekap()" style="padding:8px 14px;border:1.5px solid var(--border);
+            border-radius:8px;font-family:'Lato',sans-serif;font-size:.87rem;background:var(--bg);outline:none;width:220px"/>
         </div>
-
-        <!-- Stats bar -->
-        <div id="stats-bar" style="display:flex;gap:16px;flex-wrap:wrap;
-          margin-bottom:20px"></div>
-
         <div style="overflow-x:auto">
           <table class="rekap-table" id="rekap-table">
             <thead>
               <tr>
-                <th>#</th>
-                <th>Nama</th>
-                <th>Kelas</th>
-                <th>No. Absen</th>
-                <th>Mata Pelajaran</th>
-                <th>Judul Tugas</th>
-                <th>Waktu</th>
-                <th>Status</th>
+                <th>#</th><th>Nama</th><th>Kelas</th><th>Mata Pelajaran</th>
+                <th>Judul Tugas</th><th>Waktu</th><th>Status</th>
               </tr>
             </thead>
             <tbody id="rekap-tbody">
-              <tr>
-                <td colspan="8" style="text-align:center;padding:32px;
-                  color:var(--muted)">
-                  Belum ada tugas yang dikumpulkan.
-                </td>
-              </tr>
+              <tr><td colspan="7" style="text-align:center;padding:32px;color:var(--muted)">Belum ada tugas yang dikumpulkan.</td></tr>
             </tbody>
           </table>
         </div>
-
         <div style="margin-top:16px;font-size:.82rem;color:var(--muted)">
-          📊 Data juga tersimpan di <strong>Google Sheets</strong> Anda secara otomatis.
+          💡 Data tersimpan di browser. Untuk penyimpanan permanen, hubungkan dengan Google Sheets atau Formspree.
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════
-     SCRIPT PORTAL TUGAS
-     Ganti SCRIPT_URL dengan URL Apps Script Anda
-══════════════════════════════════════ -->
-<script>
-// ── GANTI URL INI DENGAN URL APPS SCRIPT ANDA ──
-const SCRIPT_URL = 'PASTE_URL_APPS_SCRIPT_ANDA_DISINI';
+<!-- ── FOOTER ── -->
+<footer>
+  &copy; 2025 <span>NamaGuru</span> · Website Portofolio Pendidik · Dibuat dengan ❤️ untuk dunia pendidikan
+</footer>
 
-// ── TAB SWITCH ──
-function switchTab(tab) {
-  document.querySelectorAll('.portal-panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.ptab').forEach(b => b.classList.remove('active'));
-  document.getElementById('panel-' + tab).classList.add('active');
+<script>
+// ── PAGE ROUTING ──
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('active'));
+  const nav=document.getElementById('nav-'+id);
+  if(nav) nav.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+  // close mobile nav
+  document.getElementById('navLinks').classList.remove('open');
+}
+
+function toggleNav(){
+  document.getElementById('navLinks').classList.toggle('open');
+}
+
+// ── PORTAL TABS ──
+function switchTab(tab){
+  document.querySelectorAll('.portal-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.ptab').forEach(b=>b.classList.remove('active'));
+  document.getElementById('panel-'+tab).classList.add('active');
   event.target.classList.add('active');
 }
 
 // ── CHAR COUNT ──
-function updateCount(el, countId) {
-  document.getElementById(countId).textContent = el.value.length + ' karakter';
+function updateCount(el,countId){
+  document.getElementById(countId).textContent=el.value.length+' karakter';
 }
 
-// ── DATA LOKAL ──
-let tugasList = JSON.parse(localStorage.getItem('tugasList') || '[]');
-
 // ── SUBMIT TUGAS ──
-async function submitTugas() {
-  const nama    = document.getElementById('t-nama').value.trim();
-  const kelas   = document.getElementById('t-kelas').value;
-  const absen   = document.getElementById('t-absen').value;
-  const mapel   = document.getElementById('t-mapel').value;
-  const judul   = document.getElementById('t-judul').value.trim();
-  const link    = document.getElementById('t-link').value.trim();
-  const jawaban = document.getElementById('t-jawaban').value.trim();
-  const catatan = document.getElementById('t-catatan').value.trim();
+let tugasList = JSON.parse(localStorage.getItem('tugasList')||'[]');
 
-  // Validasi
-  if (!nama || !kelas || !mapel || !judul) {
-    alert('⚠️ Mohon lengkapi semua field yang wajib diisi (*)');
-    return;
+function submitTugas(){
+  const nama=document.getElementById('t-nama').value.trim();
+  const kelas=document.getElementById('t-kelas').value;
+  const absen=document.getElementById('t-absen').value;
+  const mapel=document.getElementById('t-mapel').value;
+  const judul=document.getElementById('t-judul').value.trim();
+  const link=document.getElementById('t-link').value.trim();
+  const jawaban=document.getElementById('t-jawaban').value.trim();
+
+  if(!nama||!kelas||!mapel||!judul){
+    alert('⚠️ Mohon lengkapi semua field yang wajib diisi (*)');return;
   }
-  if (!link && !jawaban) {
-    alert('⚠️ Harap isi link tugas atau jawaban langsung.');
-    return;
+  if(!link && !jawaban){
+    alert('⚠️ Harap isi link tugas atau jawaban langsung.');return;
   }
 
-  // Loading state
-  const btn = document.getElementById('btn-kirim');
-  btn.textContent = '⏳ Mengirim...';
-  btn.disabled = true;
-  document.getElementById('success-box').style.display = 'none';
-  document.getElementById('error-box').style.display = 'none';
+  const now=new Date();
+  const waktu=now.toLocaleDateString('id-ID',{day:'2-digit',month:'long',year:'numeric'})+
+    ' · '+now.toLocaleTimeString('id-ID',{hour:'2-digit',minute:'2-digit'});
 
-  // Payload
-  const payload = { nama, kelas, absen, mapel, judul, link, jawaban, catatan };
+  const entry={no:tugasList.length+1,nama,kelas,absen,mapel,judul,link,jawaban,waktu};
+  tugasList.push(entry);
+  localStorage.setItem('tugasList',JSON.stringify(tugasList));
+  renderRekap();
 
-  try {
-    // Kirim ke Google Sheets
-    await fetch(SCRIPT_URL, {
-      method : 'POST',
-      mode   : 'no-cors',
-      headers: { 'Content-Type': 'application/json' },
-      body   : JSON.stringify(payload)
-    });
-
-    // Simpan lokal untuk rekap di browser
-    const now   = new Date();
-    const waktu = now.toLocaleDateString('id-ID', {
-      day: '2-digit', month: 'long', year: 'numeric'
-    }) + ' · ' + now.toLocaleTimeString('id-ID', {
-      hour: '2-digit', minute: '2-digit'
-    });
-
-    tugasList.push({
-      no: tugasList.length + 1,
-      nama, kelas, absen, mapel, judul, link, jawaban, waktu
-    });
-    localStorage.setItem('tugasList', JSON.stringify(tugasList));
-    renderRekap();
-
-    // Reset form
-    ['t-nama','t-link','t-jawaban','t-catatan','t-judul']
-      .forEach(id => document.getElementById(id).value = '');
-    document.getElementById('t-kelas').value  = '';
-    document.getElementById('t-mapel').value  = '';
-    document.getElementById('t-absen').value  = '';
-    document.getElementById('t-count').textContent = '0 karakter';
-
-    // Tampilkan sukses
-    document.getElementById('success-box').style.display = 'block';
-    setTimeout(() =>
-      document.getElementById('success-box').style.display = 'none', 6000);
-
-  } catch (err) {
-    document.getElementById('error-box').style.display = 'block';
-    setTimeout(() =>
-      document.getElementById('error-box').style.display = 'none', 5000);
-  } finally {
-    btn.textContent = '📤 Kumpulkan Tugas';
-    btn.disabled    = false;
-  }
+  // Reset form
+  ['t-nama','t-link','t-jawaban','t-catatan','t-judul'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('t-kelas').value='';
+  document.getElementById('t-mapel').value='';
+  document.getElementById('t-absen').value='';
+  document.getElementById('t-count').textContent='0 karakter';
+  document.getElementById('success-box').style.display='block';
+  setTimeout(()=>document.getElementById('success-box').style.display='none',5000);
 }
 
 // ── RENDER REKAP ──
-function renderRekap(filter = '') {
-  const tbody = document.getElementById('rekap-tbody');
-  const data  = tugasList.filter(t =>
-    t.nama.toLowerCase().includes(filter.toLowerCase()) ||
-    t.kelas.toLowerCase().includes(filter.toLowerCase()) ||
+function renderRekap(filter=''){
+  const tbody=document.getElementById('rekap-tbody');
+  const data=tugasList.filter(t=>
+    t.nama.toLowerCase().includes(filter.toLowerCase())||
+    t.kelas.toLowerCase().includes(filter.toLowerCase())||
     t.mapel.toLowerCase().includes(filter.toLowerCase())
   );
-
-  // Stats bar
-  const stats = document.getElementById('stats-bar');
-  const kelasList = [...new Set(tugasList.map(t => t.kelas))];
-  stats.innerHTML = `
-    <div style="background:#fff8f0;border:1px solid var(--border);border-radius:8px;
-      padding:8px 16px;font-size:.83rem;color:var(--primary);font-weight:700">
-      📦 Total: ${tugasList.length} tugas
-    </div>
-    ${kelasList.map(k => `
-      <div style="background:#f5e0c0;border-radius:8px;padding:8px 14px;
-        font-size:.8rem;color:var(--primary)">
-        ${k}: ${tugasList.filter(t=>t.kelas===k).length}
-      </div>`).join('')}`;
-
-  if (!data.length) {
-    tbody.innerHTML = `<tr><td colspan="8" style="text-align:center;
-      padding:32px;color:var(--muted)">
-      ${filter ? 'Tidak ada data yang cocok.' : 'Belum ada tugas yang dikumpulkan.'}
-    </td></tr>`;
+  if(!data.length){
+    tbody.innerHTML='<tr><td colspan="7" style="text-align:center;padding:32px;color:var(--muted)">Tidak ada data yang ditemukan.</td></tr>';
     return;
   }
-
-  tbody.innerHTML = data.map(t => `
+  tbody.innerHTML=data.map(t=>`
     <tr>
       <td>${t.no}</td>
-      <td><strong>${t.nama}</strong></td>
+      <td><strong>${t.nama}</strong>${t.absen?' <span style="color:var(--muted);font-size:.78rem">(no.${t.absen})</span>':''}</td>
       <td>${t.kelas}</td>
-      <td style="text-align:center">${t.absen || '-'}</td>
       <td>${t.mapel}</td>
-      <td>
-        ${t.judul}
-        ${t.link
-          ? `<br><a href="${t.link}" target="_blank"
-              style="color:var(--accent);font-size:.76rem;font-weight:700">
-              🔗 Lihat File</a>`
-          : ''}
-      </td>
-      <td style="font-size:.79rem;white-space:nowrap">${t.waktu}</td>
+      <td>${t.judul}${t.link?` <a href="${t.link}" target="_blank" style="color:var(--accent);font-size:.78rem">🔗 Link</a>`:''}</td>
+      <td style="font-size:.8rem">${t.waktu}</td>
       <td><span class="badge-status badge-tepat">✅ Terkumpul</span></td>
     </tr>`).join('');
 }
 
-// ── FILTER REKAP ──
-function filterRekap() {
+function filterRekap(){
   renderRekap(document.getElementById('search-rekap').value);
-}
-
-// ── EXPORT CSV ──
-function exportCSV() {
-  if (!tugasList.length) {
-    alert('Belum ada data untuk diekspor.');
-    return;
-  }
-  const header = ['No','Nama','Kelas','No. Absen','Mata Pelajaran','Judul Tugas','Link','Waktu'];
-  const rows   = tugasList.map(t =>
-    [t.no, t.nama, t.kelas, t.absen||'-', t.mapel,
-     `"${t.judul}"`, t.link||'-', t.waktu].join(',')
-  );
-  const csv  = [header.join(','), ...rows].join('\n');
-  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-  const url  = URL.createObjectURL(blob);
-  const a    = document.createElement('a');
-  a.href     = url;
-  a.download = 'rekap_tugas.csv';
-  a.click();
-  URL.revokeObjectURL(url);
 }
 
 // Init
