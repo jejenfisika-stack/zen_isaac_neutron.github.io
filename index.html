@@ -574,20 +574,22 @@ footer span{color:var(--accent);font-weight:700}
         </div>
       </div>
       <div class="form-box">
-        <label>Nama Lengkap</label>
-        <input type="text" placeholder="Nama Anda"/>
-        <label>Email</label>
-        <input type="email" placeholder="email@contoh.com"/>
-        <label>Keperluan</label>
-        <select>
-          <option>Kolaborasi Penelitian</option>
-          <option>Undangan Narasumber</option>
-          <option>Konsultasi Pembelajaran</option>
-          <option>Lainnya</option>
-        </select>
-        <label>Pesan</label>
-        <textarea placeholder="Tulis pesan Anda…"></textarea>
-        <button class="btn-submit">Kirim Pesan ✉️</button>
+  <form action="https://formspree.io/f/KODE_ANDA" method="POST">
+    <label>Nama Lengkap</label>
+    <input type="text" name="nama" placeholder="Nama Anda" required/>
+    <label>Email</label>
+    <input type="email" name="email" placeholder="email@contoh.com" required/>
+    <label>Keperluan</label>
+    <select name="keperluan">
+      <option>Kolaborasi Penelitian</option>
+      <option>Undangan Narasumber</option>
+      <option>Konsultasi Pembelajaran</option>
+      <option>Lainnya</option>
+    </select>
+    <label>Pesan</label>
+    <textarea name="pesan" placeholder="Tulis pesan Anda…"></textarea>
+    <button type="submit" class="btn-submit">Kirim Pesan ✉️</button>
+  </form>
       </div>
     </div>
   </div>
