@@ -600,8 +600,7 @@ footer span{color:var(--accent);font-weight:700}
   </form>
 </div>
 <!-- ══════════════════════════════════════
-     PAGE: PORTAL TUGAS (VERSI BARU)
-     Ganti SCRIPT_URL dengan URL Apps Script Anda
+     PAGE: PORTAL TUGAS
 ══════════════════════════════════════ -->
 <div class="page" id="page-portal">
   <div class="portal-header">
@@ -618,14 +617,11 @@ footer span{color:var(--accent);font-weight:700}
       </div>
     </div>
 
-    <!-- ── PANEL: KUMPULKAN TUGAS ── -->
+    <!-- Panel: Kumpulkan Tugas -->
     <div class="portal-panel active" id="panel-kumpul">
       <div class="tugas-form">
         <h3>Form Pengumpulan Tugas</h3>
-        <p class="form-note">
-          Isi seluruh form dengan benar. Tugas yang sudah dikumpulkan akan
-          langsung terkirim ke Google Sheets dan tidak dapat diubah kembali.
-        </p>
+        <p class="form-note">Isi seluruh form dengan benar. Tugas yang sudah dikumpulkan akan diterima oleh guru dan tidak dapat diubah kembali.</p>
 
         <label>Nama Lengkap Siswa *</label>
         <input type="text" id="t-nama" placeholder="Nama sesuai absen" required/>
@@ -659,281 +655,151 @@ footer span{color:var(--accent);font-weight:700}
         </div>
 
         <label style="margin-top:18px">Atau Ketik Jawaban Langsung</label>
-        <textarea id="t-jawaban"
-          placeholder="Ketikkan jawaban atau catatan tugas Anda di sini…"
-          oninput="updateCount(this,'t-count')"></textarea>
+        <textarea id="t-jawaban" placeholder="Ketikkan jawaban atau catatan tugas Anda di sini…" oninput="updateCount(this,'t-count')"></textarea>
         <div class="char-count" id="t-count">0 karakter</div>
 
-        <label>Catatan untuk Dosen</label>
-        <textarea id="t-catatan"
-          placeholder="Opsional: kendala, pertanyaan, atau keterangan tambahan"
-          style="height:80px"></textarea>
+        <label>Catatan untuk Guru</label>
+        <textarea id="t-catatan" placeholder="Opsional: kendala, pertanyaan, atau keterangan tambahan" style="height:80px"></textarea>
 
-        <button class="btn-submit" id="btn-kirim" onclick="submitTugas()">
-          📤 Kumpulkan Tugas
-        </button>
+        <button class="btn-submit" onclick="submitTugas()">📤 Kumpulkan Tugas</button>
 
-        <!-- Pesan sukses -->
         <div class="success-msg" id="success-box">
           <div class="s-icon">✅</div>
           <h4>Tugas Berhasil Dikumpulkan!</h4>
-          <p>Data Anda telah tersimpan di Google Sheets. Pantau status di tab
-            <strong>Rekap Pengumpulan</strong>.</p>
-        </div>
-
-        <!-- Pesan error -->
-        <div id="error-box" style="display:none;background:#ffebee;border:1.5px solid
-          #ef9a9a;border-radius:12px;padding:20px;text-align:center;margin-top:16px">
-          <div style="font-size:2rem;margin-bottom:8px">❌</div>
-          <h4 style="color:#c62828;font-family:'Playfair Display',serif;
-            font-size:1rem;margin-bottom:6px">Gagal Mengirim Tugas</h4>
-          <p style="font-size:.85rem;color:#e53935">
-            Periksa koneksi internet Anda dan coba lagi.
-          </p>
+          <p>Tugas Anda telah tercatat. Pantau status di tab <strong>Rekap Pengumpulan</strong>.</p>
         </div>
       </div>
     </div>
 
-    <!-- ── PANEL: REKAP ── -->
+    <!-- Panel: Rekap -->
     <div class="portal-panel" id="panel-rekap">
-      <div style="background:var(--card);border-radius:16px;padding:28px;
-        border:1px solid #f0e6d3;box-shadow:var(--shadow)">
-
-        <div style="display:flex;justify-content:space-between;
-          align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:12px">
-          <h3 style="font-family:'Playfair Display',serif;
-            color:var(--primary);font-size:1.1rem">
-            Data Pengumpulan Tugas
-          </h3>
-          <div style="display:flex;gap:10px;flex-wrap:wrap">
-            <input type="text" placeholder="🔍 Cari nama / kelas…"
-              id="search-rekap" oninput="filterRekap()"
-              style="padding:8px 14px;border:1.5px solid var(--border);
-              border-radius:8px;font-family:'Lato',sans-serif;font-size:.87rem;
-              background:var(--bg);outline:none;width:200px"/>
-            <button onclick="exportCSV()"
-              style="padding:8px 16px;background:var(--primary);color:#fff;
-              border:none;border-radius:8px;font-family:'Lato',sans-serif;
-              font-size:.85rem;font-weight:700;cursor:pointer">
-              ⬇️ Export CSV
-            </button>
-          </div>
+      <div style="background:var(--card);border-radius:16px;padding:28px;border:1px solid #f0e6d3;box-shadow:var(--shadow)">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;flex-wrap:wrap;gap:12px">
+          <h3 style="font-family:'Playfair Display',serif;color:var(--primary);font-size:1.1rem">Data Pengumpulan Tugas</h3>
+          <input type="text" placeholder="🔍 Cari nama / kelas…" id="search-rekap"
+            oninput="filterRekap()" style="padding:8px 14px;border:1.5px solid var(--border);
+            border-radius:8px;font-family:'Lato',sans-serif;font-size:.87rem;background:var(--bg);outline:none;width:220px"/>
         </div>
-
-        <!-- Stats bar -->
-        <div id="stats-bar" style="display:flex;gap:16px;flex-wrap:wrap;
-          margin-bottom:20px"></div>
-
         <div style="overflow-x:auto">
           <table class="rekap-table" id="rekap-table">
             <thead>
               <tr>
-                <th>#</th>
-                <th>Nama</th>
-                <th>Kelas</th>
-                <th>No. Absen</th>
-                <th>Mata Pelajaran</th>
-                <th>Judul Tugas</th>
-                <th>Waktu</th>
-                <th>Status</th>
+                <th>#</th><th>Nama</th><th>Kelas</th><th>Mata Pelajaran</th>
+                <th>Judul Tugas</th><th>Waktu</th><th>Status</th>
               </tr>
             </thead>
             <tbody id="rekap-tbody">
-              <tr>
-                <td colspan="8" style="text-align:center;padding:32px;
-                  color:var(--muted)">
-                  Belum ada tugas yang dikumpulkan.
-                </td>
-              </tr>
+              <tr><td colspan="7" style="text-align:center;padding:32px;color:var(--muted)">Belum ada tugas yang dikumpulkan.</td></tr>
             </tbody>
           </table>
         </div>
-
         <div style="margin-top:16px;font-size:.82rem;color:var(--muted)">
-          📊 Data juga tersimpan di <strong>Google Sheets</strong> Anda secara otomatis.
+          💡 Data tersimpan di browser. Untuk penyimpanan permanen, hubungkan dengan Google Sheets atau Formspree.
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════
-     SCRIPT PORTAL TUGAS
-     Ganti SCRIPT_URL dengan URL Apps Script Anda
-══════════════════════════════════════ -->
-<script>
-// ── GANTI URL INI DENGAN URL APPS SCRIPT ANDA ──
-const SCRIPT_URL = 'PASTE_URL_APPS_SCRIPT_ANDA_DISINI';
+<!-- ── FOOTER ── -->
+<footer>
+  &copy; 2025 <span>NamaGuru</span> · Website Portofolio Pendidik · Dibuat dengan ❤️ untuk dunia pendidikan
+</footer>
 
-// ── TAB SWITCH ──
-function switchTab(tab) {
-  document.querySelectorAll('.portal-panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.ptab').forEach(b => b.classList.remove('active'));
-  document.getElementById('panel-' + tab).classList.add('active');
+<script>
+// ── PAGE ROUTING ──
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('active'));
+  const nav=document.getElementById('nav-'+id);
+  if(nav) nav.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+  // close mobile nav
+  document.getElementById('navLinks').classList.remove('open');
+}
+
+function toggleNav(){
+  document.getElementById('navLinks').classList.toggle('open');
+}
+
+// ── PORTAL TABS ──
+function switchTab(tab){
+  document.querySelectorAll('.portal-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.ptab').forEach(b=>b.classList.remove('active'));
+  document.getElementById('panel-'+tab).classList.add('active');
   event.target.classList.add('active');
 }
 
 // ── CHAR COUNT ──
-function updateCount(el, countId) {
-  document.getElementById(countId).textContent = el.value.length + ' karakter';
+function updateCount(el,countId){
+  document.getElementById(countId).textContent=el.value.length+' karakter';
 }
 
-// ── DATA LOKAL ──
-let tugasList = JSON.parse(localStorage.getItem('tugasList') || '[]');
-
 // ── SUBMIT TUGAS ──
-async function submitTugas() {
-  const nama    = document.getElementById('t-nama').value.trim();
-  const kelas   = document.getElementById('t-kelas').value;
-  const absen   = document.getElementById('t-absen').value;
-  const mapel   = document.getElementById('t-mapel').value;
-  const judul   = document.getElementById('t-judul').value.trim();
-  const link    = document.getElementById('t-link').value.trim();
-  const jawaban = document.getElementById('t-jawaban').value.trim();
-  const catatan = document.getElementById('t-catatan').value.trim();
+let tugasList = JSON.parse(localStorage.getItem('tugasList')||'[]');
 
-  // Validasi
-  if (!nama || !kelas || !mapel || !judul) {
-    alert('⚠️ Mohon lengkapi semua field yang wajib diisi (*)');
-    return;
+function submitTugas(){
+  const nama=document.getElementById('t-nama').value.trim();
+  const kelas=document.getElementById('t-kelas').value;
+  const absen=document.getElementById('t-absen').value;
+  const mapel=document.getElementById('t-mapel').value;
+  const judul=document.getElementById('t-judul').value.trim();
+  const link=document.getElementById('t-link').value.trim();
+  const jawaban=document.getElementById('t-jawaban').value.trim();
+
+  if(!nama||!kelas||!mapel||!judul){
+    alert('⚠️ Mohon lengkapi semua field yang wajib diisi (*)');return;
   }
-  if (!link && !jawaban) {
-    alert('⚠️ Harap isi link tugas atau jawaban langsung.');
-    return;
+  if(!link && !jawaban){
+    alert('⚠️ Harap isi link tugas atau jawaban langsung.');return;
   }
 
-  // Loading state
-  const btn = document.getElementById('btn-kirim');
-  btn.textContent = '⏳ Mengirim...';
-  btn.disabled = true;
-  document.getElementById('success-box').style.display = 'none';
-  document.getElementById('error-box').style.display = 'none';
+  const now=new Date();
+  const waktu=now.toLocaleDateString('id-ID',{day:'2-digit',month:'long',year:'numeric'})+
+    ' · '+now.toLocaleTimeString('id-ID',{hour:'2-digit',minute:'2-digit'});
 
-  // Payload
-  const payload = { nama, kelas, absen, mapel, judul, link, jawaban, catatan };
+  const entry={no:tugasList.length+1,nama,kelas,absen,mapel,judul,link,jawaban,waktu};
+  tugasList.push(entry);
+  localStorage.setItem('tugasList',JSON.stringify(tugasList));
+  renderRekap();
 
-  try {
-    // Kirim ke Google Sheets
-    await fetch(SCRIPT_URL, {
-      method : 'POST',
-      mode   : 'no-cors',
-      headers: { 'Content-Type': 'application/json' },
-      body   : JSON.stringify(payload)
-    });
-
-    // Simpan lokal untuk rekap di browser
-    const now   = new Date();
-    const waktu = now.toLocaleDateString('id-ID', {
-      day: '2-digit', month: 'long', year: 'numeric'
-    }) + ' · ' + now.toLocaleTimeString('id-ID', {
-      hour: '2-digit', minute: '2-digit'
-    });
-
-    tugasList.push({
-      no: tugasList.length + 1,
-      nama, kelas, absen, mapel, judul, link, jawaban, waktu
-    });
-    localStorage.setItem('tugasList', JSON.stringify(tugasList));
-    renderRekap();
-
-    // Reset form
-    ['t-nama','t-link','t-jawaban','t-catatan','t-judul']
-      .forEach(id => document.getElementById(id).value = '');
-    document.getElementById('t-kelas').value  = '';
-    document.getElementById('t-mapel').value  = '';
-    document.getElementById('t-absen').value  = '';
-    document.getElementById('t-count').textContent = '0 karakter';
-
-    // Tampilkan sukses
-    document.getElementById('success-box').style.display = 'block';
-    setTimeout(() =>
-      document.getElementById('success-box').style.display = 'none', 6000);
-
-  } catch (err) {
-    document.getElementById('error-box').style.display = 'block';
-    setTimeout(() =>
-      document.getElementById('error-box').style.display = 'none', 5000);
-  } finally {
-    btn.textContent = '📤 Kumpulkan Tugas';
-    btn.disabled    = false;
-  }
+  // Reset form
+  ['t-nama','t-link','t-jawaban','t-catatan','t-judul'].forEach(id=>document.getElementById(id).value='');
+  document.getElementById('t-kelas').value='';
+  document.getElementById('t-mapel').value='';
+  document.getElementById('t-absen').value='';
+  document.getElementById('t-count').textContent='0 karakter';
+  document.getElementById('success-box').style.display='block';
+  setTimeout(()=>document.getElementById('success-box').style.display='none',5000);
 }
 
 // ── RENDER REKAP ──
-function renderRekap(filter = '') {
-  const tbody = document.getElementById('rekap-tbody');
-  const data  = tugasList.filter(t =>
-    t.nama.toLowerCase().includes(filter.toLowerCase()) ||
-    t.kelas.toLowerCase().includes(filter.toLowerCase()) ||
+function renderRekap(filter=''){
+  const tbody=document.getElementById('rekap-tbody');
+  const data=tugasList.filter(t=>
+    t.nama.toLowerCase().includes(filter.toLowerCase())||
+    t.kelas.toLowerCase().includes(filter.toLowerCase())||
     t.mapel.toLowerCase().includes(filter.toLowerCase())
   );
-
-  // Stats bar
-  const stats = document.getElementById('stats-bar');
-  const kelasList = [...new Set(tugasList.map(t => t.kelas))];
-  stats.innerHTML = `
-    <div style="background:#fff8f0;border:1px solid var(--border);border-radius:8px;
-      padding:8px 16px;font-size:.83rem;color:var(--primary);font-weight:700">
-      📦 Total: ${tugasList.length} tugas
-    </div>
-    ${kelasList.map(k => `
-      <div style="background:#f5e0c0;border-radius:8px;padding:8px 14px;
-        font-size:.8rem;color:var(--primary)">
-        ${k}: ${tugasList.filter(t=>t.kelas===k).length}
-      </div>`).join('')}`;
-
-  if (!data.length) {
-    tbody.innerHTML = `<tr><td colspan="8" style="text-align:center;
-      padding:32px;color:var(--muted)">
-      ${filter ? 'Tidak ada data yang cocok.' : 'Belum ada tugas yang dikumpulkan.'}
-    </td></tr>`;
+  if(!data.length){
+    tbody.innerHTML='<tr><td colspan="7" style="text-align:center;padding:32px;color:var(--muted)">Tidak ada data yang ditemukan.</td></tr>';
     return;
   }
-
-  tbody.innerHTML = data.map(t => `
+  tbody.innerHTML=data.map(t=>`
     <tr>
       <td>${t.no}</td>
-      <td><strong>${t.nama}</strong></td>
+      <td><strong>${t.nama}</strong>${t.absen?' <span style="color:var(--muted);font-size:.78rem">(no.${t.absen})</span>':''}</td>
       <td>${t.kelas}</td>
-      <td style="text-align:center">${t.absen || '-'}</td>
       <td>${t.mapel}</td>
-      <td>
-        ${t.judul}
-        ${t.link
-          ? `<br><a href="${t.link}" target="_blank"
-              style="color:var(--accent);font-size:.76rem;font-weight:700">
-              🔗 Lihat File</a>`
-          : ''}
-      </td>
-      <td style="font-size:.79rem;white-space:nowrap">${t.waktu}</td>
+      <td>${t.judul}${t.link?` <a href="${t.link}" target="_blank" style="color:var(--accent);font-size:.78rem">🔗 Link</a>`:''}</td>
+      <td style="font-size:.8rem">${t.waktu}</td>
       <td><span class="badge-status badge-tepat">✅ Terkumpul</span></td>
     </tr>`).join('');
 }
 
-// ── FILTER REKAP ──
-function filterRekap() {
+function filterRekap(){
   renderRekap(document.getElementById('search-rekap').value);
-}
-
-// ── EXPORT CSV ──
-function exportCSV() {
-  if (!tugasList.length) {
-    alert('Belum ada data untuk diekspor.');
-    return;
-  }
-  const header = ['No','Nama','Kelas','No. Absen','Mata Pelajaran','Judul Tugas','Link','Waktu'];
-  const rows   = tugasList.map(t =>
-    [t.no, t.nama, t.kelas, t.absen||'-', t.mapel,
-     `"${t.judul}"`, t.link||'-', t.waktu].join(',')
-  );
-  const csv  = [header.join(','), ...rows].join('\n');
-  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
-  const url  = URL.createObjectURL(blob);
-  const a    = document.createElement('a');
-  a.href     = url;
-  a.download = 'rekap_tugas.csv';
-  a.click();
-  URL.revokeObjectURL(url);
 }
 
 // Init
